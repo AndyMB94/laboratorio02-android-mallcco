@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ejercicio03Activity">
+
+    <!-- Título de Pedido -->
+    <TextView
+        android:id="@+id/tvPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pedido"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Icono y Nombre Cliente en un ConstraintLayout (no LinearLayout) -->
+    <ImageView
+        android:id="@+id/imgIconoCliente"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_cliente"
+        app:layout_constraintTop_toBottomOf="@id/tvPedido"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvNombreCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre Cliente"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="@id/imgIconoCliente"
+        app:layout_constraintBottom_toBottomOf="@id/imgIconoCliente"
+        app:layout_constraintStart_toEndOf="@id/imgIconoCliente"
+        android:layout_marginStart="16dp" />
+
+    <!-- Icono y Número Cliente en un ConstraintLayout (no LinearLayout) -->
+    <ImageView
+        android:id="@+id/imgIconoNumero"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_phone"
+        app:layout_constraintTop_toBottomOf="@id/imgIconoCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvNumeroCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Número Cliente"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="@id/imgIconoNumero"
+        app:layout_constraintBottom_toBottomOf="@id/imgIconoNumero"
+        app:layout_constraintStart_toEndOf="@id/imgIconoNumero"
+        android:layout_marginStart="16dp" />
+
+    <!-- Botones de Llamar, WhatsApp, y MAPS en un LinearLayout con restricciones -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp">
+
+        <!-- Botón Llamar -->
+        <Button
+            android:id="@+id/btnLlamar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Llamar"
+            android:layout_margin="8dp" />
+
+        <!-- Botón WhatsApp -->
+        <Button
+            android:id="@+id/btnWhatsApp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="WSP"
+            android:layout_margin="8dp" />
+
+        <!-- Botón MAPS -->
+        <Button
+            android:id="@+id/btnMaps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="MAPS"
+            android:layout_margin="8dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
